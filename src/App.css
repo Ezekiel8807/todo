@@ -1,38 +1,90 @@
-.App {
+header {
+  background-color: #63affd;
+}
+
+header p {
+  font-size: 40px;
+  font-weight: bold;
   text-align: center;
+  padding: 20px;
+  color: #ffffff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-box {
+  width: 300px;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 1px 1px 3px #63affd;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.add-todo {
+  padding: 20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #63affd;
+}
+
+.add-todo .todo-input{
+  width: 180px;
+  height: 30px;
+  padding: 5px;
+  margin-right: 2px;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  outline: none
+}
+
+.add-todo .todo-btn{  
+  height: 43px;
+  width: 60px;
+  font-size: 1em;
+  outline-style: none;
+  color: #ffffff;
+  font-weight: bold;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  background-color: #63affd;
+  box-shadow: 1px 1px #ffffff;
+
+}
+
+.todos {
+  list-style-type: none;
+  max-height: 350px;
+  overflow-y: scroll;
+}
+
+@media screen and (max-width: 769px){
+  .todos {
+    max-height: 250px;
+    overflow-y: scroll;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.todos li{
+  padding: 15px;
+  border-bottom: 1px solid #63affd;
 }
 
-.App-link {
-  color: #61dafb;
+.todos li:hover{
+  text-decoration: line-through;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.todos li:last-child {
+  border-bottom: none; 
+} 
+
+footer {
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+}
+
+footer p{
+  padding: 20px;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  background-color: #63affd;
 }
